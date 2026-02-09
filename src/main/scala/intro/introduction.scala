@@ -1,17 +1,17 @@
 package intro
 
 object introduction extends App {
+  println("Hello, app world!")
   var a = 1 + 2
   println(a)
+
+  val b:Unit = println("323")
   a = a+1
-
-  val b:Unit = println("bbb")
-
-  val inc : Int => Int = _ + 1 // x => x + 1
 
   lazy val lazyVal = {
     println("lazy val executed")
-    10
+    a=a+10
+    a
   }
 
   println("lazy val assigned")
@@ -22,7 +22,7 @@ object introduction extends App {
   lazy val cond: Boolean = true
 
   val x: Any = do {
-    println("while lazy cond")
+    println("in do")
   } while(!cond)
 
   println(x)
